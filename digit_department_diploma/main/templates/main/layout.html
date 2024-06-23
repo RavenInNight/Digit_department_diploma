@@ -1,0 +1,117 @@
+{% load static %}
+<!doctype html>
+<html style="font-size: 16px;" lang="ru"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Sample Headline">
+    <meta name="description" content="">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}" media="screen">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3&family=Source+Serif+4&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+    <meta name="generator" content="Nicepage 6.6.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <script class="u-script" type="text/javascript" src="{% static 'main/js/jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'main/js/nicepage.js' %}" defer=""></script>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="logo">
+                <a href="http://127.0.0.1:8000"><img src="{% static 'main/img/logo.jpg' %}" alt="logo.jpg"></a>
+            </div>
+            <div class="search">
+                <form class="search-form" action="/search" method="get">
+                    <input type="text" name="query" class="fa-regular fa-square-check" placeholder="Поиск по товару">
+                    <button type="submit" class="fa-solid fa-magnifying-glass"></button>
+                </form>
+            </div>
+        </header>
+    </div>
+<div class="menu">
+    <div class="menu-list">
+        <ul>
+            <li>
+                <a href="http://127.0.0.1:8000" class="fa-solid fa-house" title="Home"><font color="black" face="MS Comic Sans" size="9">   На главную  </font></a><span class="separator">/</span>
+                <a href="{% url 'about' %}" class="fa-solid fa-circle-user" title="About us"><font color="black" face="MS Comic Sans" size="9"> О нас   </font></a><span class="separator">/</span>
+                <a href="{% url 'catalog' %}" class="fa-solid fa-bars" title="Catalog"><font color="black" face="MS Comic Sans" size="9">   Товары  </font></a><span class="separator">/</span>
+                <a href="{% url 'profile' %}" class="fa-solid fa-user" title="Profile"><font color="black" face="MS Comic Sans" size="9">   Личный кабинет  </font></a><span class="separator">/</span>
+                <a href="{% url 'wishlist' %}" class="fa-solid fa-heart" title="Catalog"><font color="black" face="MS Comic Sans" size="9">   Избранное   </font></a><span class="separator">/</span>
+                <a href="{% url 'bag' %}" class="fa-solid fa-cart-shopping" title="Contact us"><font color="black" face="MS Comic Sans" size="9">   Корзина <span class="cart-count">({{ bags|length }})</span></font></a>
+                
+                <ul class="submenu"></ul>
+            </li>
+        </ul>
+            <script type="text/javascript">
+                function inputColor() {
+                    $("input").css("color", "#000");
+                }
+            </script>
+        </div>
+    </div>
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+<div class="black-block"></div>
+<div class="footer_middle_panel">
+    <div class="container">
+    <div class="footer-list">
+        <div class="footer-column">
+            <span class="footer_title">Категории</span>
+            <ul>
+                <li><a href="ru/katalog/products/oborudovanie-po-izdelijam">ОБОРУДОВАНИЕ ПО БРЕНДАМ</a></li>
+                <li><a href="ru/katalog/products/oborudovanie-po-izdelijam">ОБОРУДОВАНИЕ ПО НАЗНАЧЕНИЮ</a></li>
+                <li><a href="ru/katalog/products/dvigateli-k-promyshlennym-mashinam">ОБОРУДОВАНИЕ ДЛЯ ВТО</a></li>
+                <li><a href="ru/katalog/products/promyshlennoe-vyshivalnoe-oborudovanie">РАСКРОЙНОЕ ОБОРУДОВАНИЕ</a></li>
+                <li><a href="ru/katalog/products/oborudovanie-vto">ВЫШИВАЛЬНЫЕ МАШИНЫ</a></li>
+                <li><a href="ru/katalog/products/zapsasti">ЗАПЧАСТИ</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <span class="footer_title">Информация</span>
+            <ul>
+                <li><a href="{% url 'about' %}">О КОМПАНИИ</a></li>
+                <li><a href="ru/sotrudnichestvo">СОТРУДНИЧЕСТВО</a></li>
+                <li><a href="ru/remont-servisnoe-obsluzhivanie">СЕРВИСНЫЕ РАБОТЫ</a></li>
+                <li><a href="ru/zapchasti">ЗАПЧАСТИ</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <span class="footer_title">О магазине</span>
+            <ul>
+                <li><a href="ru/instrukcii">ИНСТРУКЦИИ</a></li>
+                <li><a href="ru/files">ФАЙЛЫ</a></li>
+                <li><a href="ru/kontakty">КОНТАКТЫ</a></li>
+                <li><a href="{% url 'about' %}">КАРТА САЙТА</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <span class="footer_title">Контакты</span> 
+            <ul class="footer_contacts_list"> 
+                <li><i class="fa fa-map-marker"></i>Россия, 125438, г. Москва, ул. Михалковская, д. 63Б, стр.2, подъезд 4, Бизнес центр "Головинские пруды", Е-Легпром, МИНТЕКС ГРУПП</li>
+                <li><i class="fa fa-phone"></i>+7 (916) 574-4889, +7 916 112-72-35</li>
+                <li><i class="fa fa-envelope-o"></i>bardo@mintex.ru info@mintex.ru</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="scroll-range">
+    <a href="#top" id="scroll-to-top"><i class="fa-solid fa-circle-up fa-2x"></i></a>
+</div>
+
+<script type="text/javascript" src="{% static 'main/layout.js' %}"></script>
+</body>
+</html>
