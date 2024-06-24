@@ -1,0 +1,11 @@
+.wishlist_item {
+    list-style-type: none;
+    padding: 0;
+}
+
+.wishlist_item li {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    padding: 10px;
+}

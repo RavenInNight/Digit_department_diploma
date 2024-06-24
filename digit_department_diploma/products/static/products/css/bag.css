@@ -1,0 +1,274 @@
+.page_center {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 35px;
+
+}
+
+.page_center p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+/* Стили для карточек товаров */
+.product_card {
+    display: flex;
+    align-items: center;
+    border: none;
+    width: 70%;
+    padding: 30px 30px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    margin-left: 10px;
+    justify-content: space-between;
+}
+
+.product_card:hover {
+    transform: translateY(-5px);
+}
+
+.product_card input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.product_card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.product_info {
+    margin-left: 20px;
+}
+
+.product_name {
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.product_price {
+    color: black;
+    font-size: 1em;
+}
+
+.product_quantity {
+    color: black;
+    font-size: 0.9em;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity input {
+    width: 30px;
+}
+
+.remove {
+    margin-top: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.bag_page_product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.product p {
+    margin: 0;
+}
+
+.product a {
+    text-decoration: none;
+    color: #333;
+}
+
+.product a i {
+    font-size: 1.5em;
+    color: #000000;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.no_stock_message {
+    text-align: center;
+}
+
+.clear_cart {
+    margin-top: 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.next__bag {
+    padding: 10px 20px;
+    background-color: #3e546c; /* Зеленый цвет */
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.next__bag:hover {
+    transform: translateY(-3px);
+}
+
+.fa-xmark, .fa-plus, .fa-minus {
+    margin-left: 10px;
+    color: #000000;
+}
+
+/* Стили для кнопок */
+.button_one, .button_two, .next__bag {                                /**/
+   padding: 30px 20px;
+   width: 100%;
+   background-color: #040404;
+   color: white;
+   border: none;
+   border-radius: 15px;
+   cursor: pointer;
+   text-transform: uppercase;
+}
+
+.button_two {
+    background-color: transparent;
+}
+
+/* Стили для блока корзины */
+.bag_block {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin-left: 20px; /* Добавляем отступ слева */
+    justify-content: space-between;
+}
+
+.rectangle_two {
+    flex: 2;
+}
+
+.rectangle_three {
+    position: absolute; /* Установим позицию относительно родительского элемента */
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #9fb5cd;
+    margin-left: 1200px;
+    margin-right:20px;
+    margin-bottom: 1405px;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+}
+
+.bag_page_button {
+    list-style-type: none;
+    padding: 0;
+}
+
+.message_bag {
+    text-align: left;
+    margin-top: -30px;
+    padding: 20px;
+    margin-right: 15px;
+    color: #3e546c; /* Светло-серый цвет текста */
+    font-weight: bold; /* Делаем текст жирным */
+    margin-left: -5px;
+}
+
+.bag_page_total {
+   text-align: left;
+   margin-top: 10px;
+   margin-left: 0px;
+   color:rgb(0, 0, 0);
+   font-weight: bold;
+}
+
+.next {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 10px; /* Закругляем углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для элемента */
+}
+
+.next:hover {
+    transform: translateY(-3px);
+}
+
+.contacts-sidebar {
+        position: fixed;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+}
+
+.contact-button {
+    position: relative; /* Добавляем позиционирование для родительского элемента */
+    margin-bottom: 2px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.contact-info {
+    display: none;
+    font-size: 14px;
+    color: black;
+    position: absolute; /* Позиционируем дополнительную информацию абсолютно */
+    left: -300px; /* Располагаем слева от родительского элемента */
+    top: 0; /* Выравниваем по верхнему краю */
+}
+
+.contact-button:hover .contact-info {
+    display: block;
+}
+
+.contact-button:hover {
+    background-color: #f9f9f9;
+}
+
+.contact-button-number {
+    margin-bottom: 2px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.contact-info-number {
+    display: none;
+    font-size: 14px;
+    margin-top: 5px;
+    color: black;
+}
+
+.contact-button-number:hover .contact-info-number {
+    display: block;
+}
+
+.contact-button-number:hover {
+    background-color: #f9f9f9;
+}

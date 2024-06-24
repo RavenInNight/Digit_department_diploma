@@ -1,0 +1,69 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="bag_page_container">
+        <div class="page_center">
+            <p>КОРЗИНА:</p>
+        </div>
+        <ul class="bag_block">
+            <li class="rectangle_two">
+                {% if bags  %}
+                <ul>
+                    {% for bag in bags %}
+                    <li class="product_card">
+                        <img class="product" src="{{ bag.product.image_main.url }}">
+                        <div class="product_info">
+                            <a href="{% url 'product_page' bag.product.id %}"><i class="product_name">{{ bag.product.name }}</i></a>
+                            <p class="product_price">Цена: {{ bag.product.price }} руб.</p>
+                            <p class="product_quantity">Количество: {{ bag.quantity }}</p>
+                            <a href="{% url 'bag_remove' bag.id %}"><i class="fa-solid fa-xmark"></i></a>
+                            <a href="{% url 'bag_plus' bag.id %}"><i class="fa-solid fa-plus"></i></a>
+                            <a class="minus" href="{% url 'bag_minus' bag.id %}"><i class="fa-solid fa-minus"></i></a>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            <li class="rectangle_three">
+                <p class="bag_page_total">Ваш заказ</p>
+                <p class="bag_page_total">Итог.........................................{{ bags.total_sum }}₽</p>
+                {% else %}
+                <div class="message_bag">
+                    <p>Ваша корзина пуста</p>
+                    <div class="next_shipping">
+                        <a href="http://127.0.0.1:8000/products/">
+                            <button class="next">Перейти к покупкам</button>
+                        </a>
+                    </div>
+                </div>
+                {% endif %}
+                {% if bags  %}
+                    <div class="next_shipping">
+                        <a href="{% url 'shipping' %}">
+                            <button class="next__bag">Оформить заказ</button>
+                        </a>
+                    </div>
+                {% endif %}
+            </li>
+        </ul>
+    </div>
+<div class="contacts-sidebar">
+    <div class="contact-button" id="whatsapp">
+        <i class="fab fa-whatsapp"></i>
+        <span><a class="contact-info" href="https://api.whatsapp.com/send?phone=79165744889">Морозов Владислав</a></span>
+        <span><a class="contact-info"><img src="{% static 'main/img/whatsup.jpg' %}" alt="whatsup.jpg"></a></span>
+    </div>
+    <div class="contact-button" id="wechat">
+        <i class="fa-brands fa-weixin"></i> 
+        <span><a class="contact-info"><img src="{% static 'main/img/wechat.jpg' %}" alt="wechat.jpg"></a></span>
+    </div>
+    <div class="contact-button-number" id="numbers">
+        <i class="fa-solid fa-phone"></i>
+        <span><a class="contact-info-number" href="tel:+79165744889">+7 (916) 574-48-89</a></span>
+        <span><a class="contact-info-number" href="tel:+79031238137">+7 (903) 123-81-37</a></span>
+    </div>
+</div>
+{% endblock %}

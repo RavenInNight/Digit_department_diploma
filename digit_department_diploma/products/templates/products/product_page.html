@@ -1,0 +1,65 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="product-page">
+    <div class="product-all-slider">
+        <div class="slideshow-container">
+            <div class="prev">&#10094;</div>
+            <img class="slide main-slide" src="{{ product.image_main.url }}" alt="{{ product.name }}">
+
+            {% if product.image_add2.url %}
+                <img class="slide main-slide" src="{{ product.image_add2.url }}" alt="{{ product.name }}">
+            {% endif %}
+
+            {% if product.image_add3 %}
+                <img class="slide main-slide" src="{{ product.image_add3.url }}" alt="{{ product.name }}">
+            {% endif %}
+
+            {% if product.image_add4 %}
+                <img class="slide main-slide" src="{{ product.image_add4.url }}" alt="{{ product.name }}">
+            {% endif %}
+
+            {% if product.image_add5 %}
+                <img class="slide main-slide" src="{{ product.image_add5.url }}" alt="{{ product.name }}">
+            {% endif %}
+
+            <div class="next">&#10095;</div>
+        </div>
+    </div>
+
+    <div class="thumbnails">
+        <img class="thumbnail" src="{{ product.image_main.url }}" alt="{{ product.name }}">
+
+        {% if product.image_add2.url %}
+            <img class="thumbnail" src="{{ product.image_add2.url }}" alt="{{ product.name }}">
+        {% endif %}
+
+        {% if product.image_add3 %}
+            <img class="thumbnail" src="{{ product.image_add3.url }}" alt="{{ product.name }}">
+        {% endif %}
+
+        {% if product.image_add4 %}
+            <img class="thumbnail" src="{{ product.image_add4.url }}" alt="{{ product.name }}">
+        {% endif %}
+
+        {% if product.image_add5 %}
+            <img class="thumbnail" src="{{ product.image_add5.url }}" alt="{{ product.name }}">
+        {% endif %}
+    </div>
+    <div class="product-details">
+        <div class="product-all-description">
+            <h1 class="product-title">{{ product.name }}</h1>
+            <p class="product-price">{{ product.price }} руб.</p>
+            <p class="product-description">{{ product.description }}</p>
+            <div class="product-buttons">
+                <a href="{% url 'bag_add' product.id %}" class="button add-to-cart">Добавить в корзину</a>
+                <a href="{% url 'wishlist_add' product.id %}" class="button add-to-wishlist">Добавить в избранное</a>
+            </div>
+        </div>
+        <div id="wishlist-message" style="display: none;"></div>
+    </div>
+</div>
+{% endblock %}
