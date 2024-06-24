@@ -5,8 +5,9 @@
 
 {% block content %}
 <head>
-<meta charset="UTF-8">
-<title>Избранное</title>
+  <meta charset="UTF-8">
+  <title>Избранное</title>
+  <link rel="stylesheet" href="wishlist.css">
 </head>
 <body>
   <h1>{{ title }}</h1>
@@ -20,62 +21,6 @@
     <p>Ваш список избранного пуст</p>
   {% endif %}
   </body>
-<style>
-  .contacts-sidebar {
-      position: fixed;
-      top: 50%;
-      right: 10px;
-      transform: translateY(-50%);
-  }
-  .contact-button {
-      position: relative; /* Добавляем позиционирование для родительского элемента */
-      margin-bottom: 2px;
-      cursor: pointer;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-      padding: 20px;
-  }
-
-  .contact-info {
-      display: none;
-      font-size: 14px;
-      color: black;
-      position: absolute; /* Позиционируем дополнительную информацию абсолютно */
-      left: -300px; /* Располагаем слева от родительского элемента */
-      top: 0; /* Выравниваем по верхнему краю */
-  }
-
-  .contact-button:hover .contact-info {
-      display: block;
-  }
-
-  .contact-button:hover {
-      background-color: #f9f9f9;
-  }
-  .contact-button-number {
-      margin-bottom: 2px;
-      cursor: pointer;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-      padding: 20px;
-  }
-
-  .contact-info-number {
-      display: none;
-      font-size: 14px;
-      margin-top: 5px;
-      color: black;
-  }
-  .contact-button-number:hover .contact-info-number {
-      display: block;
-  }
-
-  .contact-button-number:hover {
-      background-color: #f9f9f9;
-  }
-</style>
 <div class="contacts-sidebar">
 <div class="contact-button" id="whatsapp">
   <i class="fab fa-whatsapp"></i>

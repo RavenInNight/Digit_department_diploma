@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0c55d83-ad3c-4c5b-bea3-1530cab5ff9f" name="Changes" comment="добавлено app product и к нему html, css, js" />
+    <list default="true" id="d0c55d83-ad3c-4c5b-bea3-1530cab5ff9f" name="Changes" comment="сделаны миграции для products">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digit_department_diploma/main/templates/main/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/digit_department_diploma/main/templates/main/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digit_department_diploma/products/static/products/css/wishlist.css" beforeDir="false" afterPath="$PROJECT_DIR$/digit_department_diploma/products/static/products/css/wishlist.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digit_department_diploma/products/templates/products/bag.html" beforeDir="false" afterPath="$PROJECT_DIR$/digit_department_diploma/products/templates/products/bag.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digit_department_diploma/products/templates/products/product_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/digit_department_diploma/products/templates/products/product_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digit_department_diploma/products/templates/products/search_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/digit_department_diploma/products/templates/products/search_results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digit_department_diploma/products/templates/products/wishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/digit_department_diploma/products/templates/products/wishlist.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +90,21 @@
       <option name="project" value="LOCAL" />
       <updated>1719267815705</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="сделаны миграции для products">
+      <created>1719268245887</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719268245888</updated>
+    </task>
+    <task id="LOCAL-00004" summary="сделаны миграции для products">
+      <created>1719268264411</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719268264411</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,6 +120,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="добавлено app product и к нему html, css, js" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавлено app product и к нему html, css, js" />
+    <MESSAGE value="сделаны миграции для products" />
+    <option name="LAST_COMMIT_MESSAGE" value="сделаны миграции для products" />
   </component>
 </project>
