@@ -1,0 +1,257 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<style>
+    /* Стили для шапки */
+    .header {
+        background-color: white;
+        color: black;
+    }
+
+    /* Стили для фона сайта */
+    body {
+        background-image: url('https://images.wallpaperscraft.ru/image/single/linii_svetlyj_fon_43975_1920x1080.jpg');
+        background-attachment: fixed;
+    }
+
+    /* Стили для текста в форме */
+    .form-text {
+        color: black;
+    }
+    .page_center {
+        text-align: center;
+        margin-top: 50px; /* Регулируйте отступ сверху по вашему усмотрению */
+        font-family: 'Arial', sans-serif; /* Изменение шрифта */
+    }
+    
+    .create_account_block-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+    }
+    
+    .rectangle_two {
+        background-color: rgb(255, 254, 254);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+    
+    .button {
+        background-color: rgb(205, 100, 100);
+        color: rgb(249, 244, 244);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: block; /*кнопка посередине*/
+        margin: 0 auto; /*кнопка посередине*/
+        width: 50%; /*ув кнопку зарегистрироваться по ширине*/
+    }
+    
+    .button:hover {
+        background-color: darkred;
+    }
+    
+    .login__field {
+        margin-bottom: 10px;
+    }
+    
+    .login__submit {
+        margin-top: 20px;
+    }
+    
+    .attention_create {
+        text-align: center;
+    }
+    
+    .errors {
+        color: red;
+    }
+    
+    .label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    input:focus {
+    color: black;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #0b0a0a;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+    
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+        outline: none;
+        border-color: rgb(96, 165, 132); /* Цвет рамки при фокусе */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    </style>
+    
+    <div class="page_center">
+        <h2 class="mb-3 font-weight-light">Зарегистрируйтесь!</h2>
+        <h6 class="subtitle font-weight-normal">Заполните поля ниже:</h6>
+    </div>
+    
+    <ul class="create_account_block-list">
+        <li class="rectangle_two">
+            <div class="block-list screen__content">
+                <form class="login" action="{% url 'create_account' %}" method="post">
+                    {% csrf_token %}
+                    <div class="login__field">
+                        <label for="username" class="label" style="color: black">Имя пользователя:</label>
+                        {{ form.username }}
+                    </div>
+                    <div class="login__field">
+                        <label for="email" class="label" style="color: black">Email:</label>
+                        {{ form.email }}
+                    </div>
+                    <div class="login__field">
+                        <label for="password1" class="label" style="color: black">Пароль:</label>
+                        {{ form.password1 }}
+                    </div>
+                    <div class="login__field">
+                        <label for="password2" class="label" style="color: black">Повторите пароль:</label>
+                        {{ form.password2 }}
+                    </div>
+                    <button type="submit" class="button login__submit">
+                        <span class="button_text_create">Зарегестрироваться</span>
+                    </button>
+                </form>
+                <div class="row">
+                    <div class="col-lg-12 text-center mt-4" style="color: black">
+                    <!--<h6 class="font-weight-normal">Зарегистрируйтесь при помощи социальных сетей:</h6>-->
+                    <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                    <a href="#" class="btn btn-block bg-facebook text-white mt-3" class="fa-brands fa-vk">Вконтакте</a>
+                    </div>
+                    <div class="col-lg-6 col-md-6" style="color: black">
+                    <a href="#" class="btn btn-block bg-twitter text-white mt-3" class="fa-brands fa-telegram">Телеграм</a>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-12 text-center mt-4" style="color: black">
+                    Уже есть аккаунт? <a href="{% url 'login' %}" class="text-danger">Войти</a>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-6 right-image pl-3" style="background-image:url(https://catherineasquithgallery.com/uploads/posts/2021-02/1612769042_20-p-goluboi-fon-dlya-pisma-22.jpg);">
+                    </div>
+                    </div>
+                   </div>
+            </div>    
+        </li>
+    
+        <li class="rectangle_one">
+            <!--<ul class="login_page_button">
+                <li><a href="{% url 'login' %}"><button class="button">войти</button></a></li>
+                <li><a href="{% url 'create_account' %}"><button class="button">создать аккаунт</button></a></li>
+                <li><a><button class="button">сбросить пароль</button></a></li>
+            </ul>-->
+            <!--<img src="" alt="Картинка">  Замените ссылку на реальную -->
+        </li>
+    
+        <li class="rectangle_three">
+            <div class="attention_create">
+                {% if form.errors %}
+                    {% for field, errors in form.errors.items %}
+    
+    {% for error in errors|slice:":2"|first %}
+                            <p class="errors">{{ error }}</p>
+                        {% endfor %}
+                    {% endfor %}
+                {% else %}
+                {% endif %}
+            </div>
+        </li>
+    </ul>
+    <style>
+        .contacts-sidebar {
+            position: fixed;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+        .contact-button {
+            position: relative; /* Добавляем позиционирование для родительского элемента */
+            margin-bottom: 2px;
+            cursor: pointer;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .contact-info {
+            display: none;
+            font-size: 14px;
+            color: black;
+            position: absolute; /* Позиционируем дополнительную информацию абсолютно */
+            left: -300px; /* Располагаем слева от родительского элемента */
+            top: 0; /* Выравниваем по верхнему краю */
+        }
+
+        .contact-button:hover .contact-info {
+            display: block;
+        }
+
+        .contact-button:hover {
+            background-color: #f9f9f9;
+        }
+        .contact-button-number {
+            margin-bottom: 2px;
+            cursor: pointer;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .contact-info-number {
+            display: none;
+            font-size: 14px;
+            margin-top: 5px;
+            color: black;
+        }
+        .contact-button-number:hover .contact-info-number {
+            display: block;
+        }
+
+        .contact-button-number:hover {
+            background-color: #f9f9f9;
+        }
+</style>
+<div class="contacts-sidebar">
+    <div class="contact-button" id="whatsapp">
+        <i class="fab fa-whatsapp"></i>
+        <span><a class="contact-info" href="https://api.whatsapp.com/send?phone=79165744889">Морозов Владислав</a></span>
+        <span><a class="contact-info"><img src="{% static 'main/img/whatsup.jpg' %}" alt="whatsup.jpg"></a></span>
+    </div>
+    <div class="contact-button" id="wechat">
+        <i class="fa-brands fa-weixin"></i> 
+        <span><a class="contact-info"><img src="{% static 'main/img/wechat.jpg' %}" alt="wechat.jpg"></a></span>
+    </div>
+    <div class="contact-button-number" id="numbers">
+        <i class="fa-solid fa-phone"></i>
+        <span><a class="contact-info-number" href="tel:+79165744889">+7 (916) 574-48-89</a></span>
+        <span><a class="contact-info-number" href="tel:+79031238137">+7 (903) 123-81-37</a></span>
+    </div>
+</div>
+{% endblock %}

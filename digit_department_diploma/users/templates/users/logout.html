@@ -1,0 +1,48 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="page_center">
+        <p>ВВЕДИТЕ ДАННЫЕ</p>
+    </div>
+    <ul class="block-list">
+        <li class="rectangle_one">
+            <ul class="login_page_button">
+                <li><a href="{% url 'login' %}"><button class="button_one">войти</button></a></li>
+                <li><a href="{% url 'create_account' %}"><button class="button_two">создать аккаунт</button></a></li>
+                <li><a><button class="button_three">сбросить пароль</button></a></li>
+            </ul>
+        </li>
+        <li class="rectangle_two">
+            <div class="screen__content">
+                <form class="login" action="{% url 'login' %}" method="post">
+                    {% csrf_token %}
+                    <div class="login__field">
+                        {{ form.username }}
+                    </div>
+                    <div class="login__field">
+                        {{ form.password }}
+                    </div>
+                    <button class="button login__submit">
+                        <span class="button_text_create">войти</span>
+                    </button>
+                </form>
+            </div>
+        </li>
+        <li class="rectangle_three">
+            <div class="attention_login">
+                {% if form.non_field_errors %}
+                    {% for field, errors in form.errors.items %}
+                        {% for error in errors %}
+                            <p class="errors">{{ error }}</p>
+                        {% endfor %}
+                    {% endfor %}
+                {% else %}
+                    <p>войдите, чтобы проверить свои заказы</p>
+                {% endif %}
+            </div>
+        </li>
+    </ul>
+{% endblock %}
