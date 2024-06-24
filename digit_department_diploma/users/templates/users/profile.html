@@ -4,74 +4,6 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-<style>
-    body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
-
-.page_center {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.profile_block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.profile_page_button {
-    list-style-type: none;
-    padding: 0;
-}
-
-.profile_page_button li {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.button_one, .button_admin, .button_two, .button_three, .button_four {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #3498db;
-    color: #fff;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.button_one:hover, .button_admin:hover, .button_two:hover, .button_three:hover, .button_four:hover {
-    background-color: #2980b9;
-    transform: translateY(-4px);
-}
-
-.brief_profile {
-    margin-top: 20px;
-    max-width: 100%;
-}
-.button_one,
-.button_two,
-.button_three,
-.button_four {
-    background-color: white;
-    color: black;
-    border-radius: 5px;
-    padding: 80px 100px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    box-shadow: black;
-}
-
-.button_one:hover,
-.button_two:hover,
-.button_three:hover,
-.button_four:hover {
-    background-color: #5f7e9f;
-    color: white;
-}
-</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,9 +11,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!--<div class="page_center">
-        <p>Здравствуйте, {{ user.first_name }}!</p>
-    </div>-->
     <div class="profile_block">
         <div class="rectangle">
             <h1 class="profile_title" style="color: white; font-family: 'Times New Roman', Times, serif;">Личный кабинет</h1>
@@ -103,14 +32,6 @@
                     </a>
                 </li>
                 {% if user.is_superuser or user.is_staff %}
-                    <!--<li>
-                        <a href="{% url 'admin:index' %}">
-                            <div class="card card_admin">
-                                <button class="button_admin" style="font-size: 30px;">Admin</button>
-                                <img src="{% static 'icons/admin_icon.png' %}" alt="Admin Icon">
-                            </div>
-                        </a>
-                    </li>-->
                     <li>
                         <a href="{% url 'wishlist' %}">
                             <div class="card card_favorites">
@@ -142,62 +63,7 @@
         <!--<img class="brief_profile" src="{% static 'main/img/cups_table.jpg' %}">-->
     </div>
 </body>
-<style>
-    .contacts-sidebar {
-        position: fixed;
-        top: 50%;
-        right: 10px;
-        transform: translateY(-50%);
-    }
-    .contact-button {
-        position: relative; /* Добавляем позиционирование для родительского элемента */
-        margin-bottom: 2px;
-        cursor: pointer;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        padding: 20px;
-    }
 
-    .contact-info {
-        display: none;
-        font-size: 14px;
-        color: black;
-        position: absolute; /* Позиционируем дополнительную информацию абсолютно */
-        left: -300px; /* Располагаем слева от родительского элемента */
-        top: 0; /* Выравниваем по верхнему краю */
-    }
-
-    .contact-button:hover .contact-info {
-        display: block;
-    }
-
-    .contact-button:hover {
-        background-color: #f9f9f9;
-    }
-    .contact-button-number {
-        margin-bottom: 2px;
-        cursor: pointer;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        padding: 20px;
-    }
-
-    .contact-info-number {
-        display: none;
-        font-size: 14px;
-        margin-top: 5px;
-        color: black;
-    }
-    .contact-button-number:hover .contact-info-number {
-        display: block;
-    }
-
-    .contact-button-number:hover {
-        background-color: #f9f9f9;
-    }
-</style>
 <div class="contacts-sidebar">
 <div class="contact-button" id="whatsapp">
     <i class="fab fa-whatsapp"></i>
