@@ -20,17 +20,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0ktqr3j_%5_t#k0#mf%3iru1(3bm2a$z$h@+vw46&^jc=8*r^c'
+SECRET_KEY = 'django-insecure-+lobo3garg!!$yt#0adb5gzzqm%ngtpdfu%sh#qsf#4#7m7)6%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'users',
+    'products',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'digit_department_diploma.urls'
@@ -62,6 +65,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'products.context_processors.bags',
             ],
         },
     },
@@ -111,13 +115,41 @@ USE_I18N = True
 
 USE_TZ = True
 
+USE_L10N = True
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+if DEBUG:
+    STATICFILES_DIRS = [
+        BASE_DIR / "static",
+    ]
+else:
+    STATIC_ROOT = BASE_DIR / 'static'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# users
+
+AUTH_USER_MODEL = 'users.User'
+LOGIN_URL = '/users/login/'
+LOGIN_REDIRECT_URL = '/users/profile'
+LOGOUT_REDIRECT_URL = '/'
+
+#stripe
+STRIPE_PUBLIC_KEY = 'pk_test_51Nr0NBHBkggl3V99wPV27ImaMgKrfZUyB6ENkMDvhW3LPaJlM86MnUTW2KIJxjOo2LLz4mzJItTao6JwtGv0Sx3a00LKy7VxOp'
+STRIPE_SECRET_KEY = 'sk_test_51Nr0NBHBkggl3V99X9kBnbNxByxEIylzPMUvnFiLyg3VnCbjGaFtaluQDd066Hg60UuWTU5tckaCtYsvYveAVDvv00FVS9ZDfb'
+
+DOMAIN_NAME = 'http://127.0.0.1:8000/'
+
+STRIPE_WEBHOOK_SECRET = 'whsec_d5baee1a18ac3e72cbccb7a2fbb44dc33f42eab095232281b5816bab2b13db32'
+

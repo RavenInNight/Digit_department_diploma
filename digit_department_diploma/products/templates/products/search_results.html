@@ -1,0 +1,27 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}search{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <h1>Search Results</h1>
+
+    <ul>
+      {% for product in products %}
+      <div class="card h-100">
+        <a href="{% url 'product_page' product.id %}">
+            <img class="card-img-top" src="{{ product.image_main.url }}" alt="">
+        </a>
+        <div class="card-body">
+            <h4 class="card-title">
+                <a href="{% url 'product_page' product.id %}" style="color: rgb(1, 1, 1);">{{ product.name }}</a>
+            </h4>
+            <h5>{{ product.price }} руб.</h5>
+        </div>
+      </div>
+      {% endfor %}
+    </ul>
+{% endblock %}
+</html>

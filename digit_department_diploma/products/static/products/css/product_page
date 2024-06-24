@@ -1,0 +1,200 @@
+.product-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.product-images {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.main-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.thumbnail-images {
+    display: flex;
+    margin-top: 10px;
+}
+
+.thumbnail-image {
+    width: 100px;
+    height: 50px;
+    margin-right: 5px;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.product-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #000000;
+}
+
+.product-description {
+    margin-top: 10px;
+}
+
+.product-buttons {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#wishlist-message {
+    margin-top: 10px;
+    color: rgb(219, 122, 122);
+}
+
+.slideshow-container {
+    position: relative;
+    width: 700px;
+    height: 500px;
+    overflow: hidden;
+    margin-right: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: rgb(208, 207, 207);
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 520px;
+    margin-left: -650px;
+    margin-right: 100px;
+}
+
+.thumbnail {
+    width: 100px; /* Ширина миниатюры */
+    height: auto; /* Автоматическая высота */
+    margin-right: 10px; /* Расстояние между миниатюрами */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.thumbnail:hover {
+    transform: translateY(-5px);
+    }
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.prev {
+    left: -10px;
+}
+
+.next {
+    right: -10px;
+}
+
+.main-slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.product-all-description {
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #697a89;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-left: 350px;
+}
+
+.zoomed {
+    transform: scale(1.5); /* Увеличение масштаба на 50% */
+    border: 5px solid black; /* Добавление черной рамки */
+}
+
+.zoom-in {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.zoomed-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zoomed-image {
+    max-width: 90%;
+    max-height: 90%;
+    cursor: pointer;
+}
+
+.zoomed-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.full-screen {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
