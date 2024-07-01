@@ -91,15 +91,19 @@
 }
 
 .thumbnail {
-    width: 100px; /* Ширина миниатюры */
-    height: auto; /* Автоматическая высота */
-    margin-right: 10px; /* Расстояние между миниатюрами */
+    width: 100px;
+    /* Ширина миниатюры */
+    height: auto;
+    /* Автоматическая высота */
+    margin-right: 10px;
+    /* Расстояние между миниатюрами */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 .thumbnail:hover {
     transform: translateY(-5px);
-    }
+}
 
 .prev,
 .next {
@@ -139,8 +143,10 @@
 }
 
 .zoomed {
-    transform: scale(1.5); /* Увеличение масштаба на 50% */
-    border: 5px solid black; /* Добавление черной рамки */
+    transform: scale(1.5);
+    /* Увеличение масштаба на 50% */
+    border: 5px solid black;
+    /* Добавление черной рамки */
 }
 
 .zoom-in {
@@ -177,6 +183,7 @@
     max-width: 100%;
     max-height: 100%;
 }
+
 .full-screen {
     position: static;
     top: 0;
@@ -187,6 +194,7 @@
     background: rgba(0, 0, 0, 0.9);
     z-index: 9999;
 }
+
 .close-button {
     position: absolute;
     top: 10px;

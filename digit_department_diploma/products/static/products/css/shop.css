@@ -1,10 +1,12 @@
 .slider {
     width: 100%;
-    height: 40vh; /* Занимает 100% высоты видимой области браузера */
+    height: 40vh;
+    /* Занимает 100% высоты видимой области браузера */
     overflow: hidden;
     position: relative;
 
-    }
+}
+
 .slide {
     width: 100%;
     height: 700px;
@@ -24,7 +26,7 @@
     background-image: url('https://artpostel-ivanovo.ru/files/upload_7/product/kpb-poplin-zima-leto/Prityazhenie-kolor_1.jpg');
 }
 
-.iframe {
+iframe {
     width: 100%;
     height: 400px;
 }
@@ -32,7 +34,8 @@
 .search-form {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Равномерное распределение элементов */
+    justify-content: space-between;
+    /* Равномерное распределение элементов */
     width: 100%;
     margin: 0 auto;
     margin-left: 25px;
@@ -40,14 +43,17 @@
 }
 
 .search-form input[type="text"] {
-    flex: 1; /* Растягиваем поле ввода на всю доступную ширину */
+    flex: 1;
+    /* Растягиваем поле ввода на всю доступную ширину */
     padding: 25px;
     border: 0;
     border-radius: 15px;
-    margin-right: 20px; /* Отступ между полем ввода и кнопкой */
+    margin-right: 20px;
+    /* Отступ между полем ввода и кнопкой */
     margin-left: -20px;
     color: black;
-    background-color: white; /* Цвет формы */
+    background-color: white;
+    /* Цвет формы */
     border: 1px solid #ddd;
 }
 
@@ -57,7 +63,8 @@
     color: white;
     border: 1px solid #ddd;
     border-radius: 15px;
-    width: 5%; /* Ширина кнопки */
+    width: 5%;
+    /* Ширина кнопки */
     margin-right: 40px;
     margin-left: -17px;
 }
@@ -68,27 +75,31 @@
 }
 
 .category {
-    margin-left: 20px; /* Перемещаем "КАТЕГОРИИ" вправо */
+    margin-left: 20px;
+    /* Перемещаем "КАТЕГОРИИ" вправо */
     margin-right: 15px;
 }
+
 .category a {
     display: inline-block;
     padding: 17px 135px;
     background-color: #ffffff;
     color: white;
     text-decoration: none;
-    border-radius:15px;
+    border-radius: 15px;
     box-shadow: 2px solid black;
 }
 
 .category a:hover {
     background-color: rgb(128, 155, 202);
 }
+
 .card {
     border-radius: 15px;
     overflow: hidden;
     position: relative;
 }
+
 .card:hover {
     transform: translateY(-5px);
 }
@@ -111,12 +122,16 @@
 }
 
 .card-body {
-    position: relative; /* Добавляем позиционирование для кнопок */
-    text-align: center; /* Центрируем кнопки */
-    padding-bottom: 65px; /* Добавляем отступ снизу для размещения кнопок */
+    position: relative;
+    /* Добавляем позиционирование для кнопок */
+    text-align: center;
+    /* Центрируем кнопки */
+    padding-bottom: 65px;
+    /* Добавляем отступ снизу для размещения кнопок */
 }
 
-.favorite-btn, .cart-btn {
+.favorite-btn,
+.cart-btn {
     position: absolute;
     bottom: 10px;
     left: 60%;
@@ -134,8 +149,10 @@
     bottom: 10px;
 }
 
-.favorite-btn i, .cart-btn i {
-    margin-right: 5px; /* Добавляем небольшой отступ между значком и текстом */
+.favorite-btn i,
+.cart-btn i {
+    margin-right: 5px;
+    /* Добавляем небольшой отступ между значком и текстом */
 }
 
 /*для успешного добавления в избранное или корзину*/
@@ -180,6 +197,7 @@
     padding: 5px;
     transition: background-color 0.3s;
 }
+
 .category-wrapper a:hover {
     background-color: rgb(204, 217, 237);
     color: #555;
@@ -208,17 +226,20 @@
     margin: 0;
     border-left: 3px solid rgb(71, 108, 171);
 }
+
 .arrow {
     cursor: pointer;
     color: rgb(71, 108, 171);
     transition: transform 0.3s ease;
 }
+
 .arrow-wrapper {
     position: absolute;
     right: 5px;
     top: 50%;
     transform: translateY(-50%);
 }
+
 .expanded .arrow {
     transform: rotate(90deg);
 }
@@ -243,7 +264,7 @@
 
 .subcategories a::before {
     content: '';
-    position:absolute;
+    position: absolute;
     bottom: 0;
     left: -5px;
     width: 103%;
@@ -288,6 +309,7 @@
     padding: 10px;
     z-index: 2;
 }
+
 .subcategories,
 .sub-subcategories {
     position: absolute !important;
@@ -314,8 +336,10 @@
     right: 10px;
     transform: translateY(-50%);
 }
+
 .contact-button {
-    position: relative; /* Добавляем позиционирование для родительского элемента */
+    position: relative;
+    /* Добавляем позиционирование для родительского элемента */
     margin-bottom: 2px;
     cursor: pointer;
     background-color: #fff;
@@ -328,9 +352,12 @@
     display: none;
     font-size: 14px;
     color: black;
-    position: absolute; /* Позиционируем дополнительную информацию абсолютно */
-    left: -300px; /* Располагаем слева от родительского элемента */
-    top: 0; /* Выравниваем по верхнему краю */
+    position: absolute;
+    /* Позиционируем дополнительную информацию абсолютно */
+    left: -300px;
+    /* Располагаем слева от родительского элемента */
+    top: 0;
+    /* Выравниваем по верхнему краю */
 }
 
 .contact-button:hover .contact-info {
@@ -359,7 +386,7 @@
 
 .contact-button-number:hover .contact-info-number {
     display: block;
-    }
+}
 
 .contact-button-number:hover {
     background-color: #f9f9f9;

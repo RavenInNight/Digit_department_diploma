@@ -1,0 +1,39 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<head>
+<meta charset="UTF-8">
+<title>Избранное</title>
+</head>
+<body>
+  <h1>{{ title }}</h1>
+  {% if wishlists %}
+    <ul>
+      {% for wishlist in wishlists %}
+        <li>{{ wishlist.product.name }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Ваш список избранного пуст</p>
+  {% endif %}
+  </body>
+<div class="contacts-sidebar">
+<div class="contact-button" id="whatsapp">
+  <i class="fab fa-whatsapp"></i>
+  <span><a class="contact-info" href="https://api.whatsapp.com/send?phone=79165744889">Морозов Владислав</a></span>
+  <span><a class="contact-info"><img src="{% static 'main/img/whatsup.jpg' %}" alt="whatsup.jpg"></a></span>
+</div>
+<div class="contact-button" id="wechat">
+  <i class="fa-brands fa-weixin"></i>
+  <span><a class="contact-info"><img src="{% static 'main/img/wechat.jpg' %}" alt="wechat.jpg"></a></span>
+</div>
+<div class="contact-button-number" id="numbers">
+  <i class="fa-solid fa-phone"></i>
+  <span><a class="contact-info-number" href="tel:+79165744889">+7 (916) 574-48-89</a></span>
+  <span><a class="contact-info-number" href="tel:+79031238137">+7 (903) 123-81-37</a></span>
+</div>
+</div>
+{% endblock %}
