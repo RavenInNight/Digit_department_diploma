@@ -1,0 +1,299 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: white;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .slider {
+            width: 100%;
+            height: 60vh;
+            /* Занимает 100% высоты видимой области браузера */
+            overflow: hidden;
+            position: relative;
+
+        }
+
+        .slide {
+            width: 100%;
+            height: 700px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide:nth-child(1) {
+            background-image: url('https://gagaru.club/uploads/posts/2023-06/1685729706_gagaru-club-p-sinii-uzor-krasivo-11.jpg');
+        }
+
+        .slide:nth-child(2) {
+            background-image: url('https://cdn.mytextile.ru/24946/1100x800/dsc-0161-min.jpg');
+        }
+
+        .slide:nth-child(3) {
+            background-image: url('https://artpostel-ivanovo.ru/files/upload_7/product/kpb-poplin-zima-leto/Prityazhenie-kolor_1.jpg');
+        }
+
+        .brands {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+        }
+
+        #feature-section {
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            margin-bottom: 200px;
+            background-image: url('https://propowerpoint.ru/fony/goluboj-fon-dlya-prezentacii/62.jpg');
+            background-size: cover;
+            /* Растягивает фон на всю область */
+            background-position: bottom;
+            /* Выравнивает фон по центру */
+            background-attachment: fixed;
+
+        }
+
+        .feature-bust {
+            width: 150px;
+            padding: 10px;
+            /*отвечает за поле снизу, чтобы блок был длиннным снизу*/
+            border: 2px solid transparent;
+            margin-top: -60px;
+            text-align: center;
+            margin-left: 20px;
+            transition: all 0.3s ease;
+            background-color: white;
+            margin-bottom: 30px;
+            width: calc(20% - 20px);
+            margin-right: 60px;
+        }
+
+        .feature-bust:hover {
+            border-color: #5c5c5c;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgb(109, 149, 175);
+        }
+
+        .features-img {
+            max-width: 120%;
+            height: auto;
+            border-radius: 10px;
+            /* Добавляет закругление к картинкам */
+        }
+
+        .section {
+            background-image: url('https://static.tildacdn.com/tild3831-6364-4664-b733-383539303361/02736369.jpg');
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-attachment: fixed;
+            margin-top: 400px;
+        }
+
+        .left {
+            flex: 1;
+            position: relative;
+            padding: 10px;
+        }
+
+        .left img {
+            width: 700px;
+            transition: transform 0.3s;
+            display: block;
+        }
+
+        .left img:hover {
+            transform: scale(1.1);
+        }
+
+        .right {
+            flex: 1;
+            text-align: left;
+            padding: 10px;
+            margin-left: -80px;
+            margin-right: 50px;
+        }
+
+        .main-text {
+            background-color: rgba(255, 255, 255, 0.739);
+            /* Добавляем белый фон для основного текста */
+            padding: 1px;
+        }
+
+        .right h2 {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .right hr {
+            border: none;
+            border-top: 5px solid rgb(0, 0, 0);
+            margin: 10px 0;
+        }
+
+        .right p {
+            color: rgb(0, 0, 0);
+        }
+
+        .button {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            border: 2px solid rgb(0, 0, 0);
+            padding: 15px 35px;
+            margin-top: 7px;
+            cursor: pointer;
+            border-radius: 2px;
+            position: relative;
+            /* Добавляем позиционирование */
+            transition: transform 0.3s;
+            /* Добавляем плавное изменение при наведении */
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: rgb(255, 255, 255);
+            transform: scaleX(0);
+            /* Изначально линия будет невидимой */
+            transition: transform 0.3s;
+            /* Добавляем плавное изменение при наведении */
+        }
+
+        .button:hover::before {
+            transform: scaleX(1);
+            /* При наведении линия появляется */
+        }
+
+        .button:hover {
+            transform: translateY(-5px);
+            /* Плавное поднятие кнопки при наведении */
+        }
+
+        .button:focus {
+            outline: none;
+            /* Убираем стандартное выделение при фокусе */
+        }
+
+        #grid-section {
+            background-image: url('https://propowerpoint.ru/fony/goluboj-fon-dlya-prezentacii/62.jpg');
+            background-size: cover;
+            /* Растягивает фон на всю область */
+            background-position: bottom;
+            /* Выравнивает фон по центру */
+            margin-top: -20px;
+            background-attachment: fixed;
+            /* Фиксирует фоновую картинку */
+            padding-bottom: 50px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            margin-left: 80px;
+            margin-right: 80px;
+        }
+
+        .grid-item {
+            border: 2px solid rgb(255, 255, 255);
+            /* Обрамление */
+            padding: 50px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 0px;
+            transition: all 0.3s ease;
+
+        }
+
+        .grid-item:hover {
+            border-color: #a4a4a4;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .grid-item img {
+            max-width: 50%;
+            height: auto;
+            text-align: center;
+        }
+
+        .contacts-sidebar {
+            position: fixed;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        .contact-button {
+            position: relative;
+            /* Добавляем позиционирование для родительского элемента */
+            margin-bottom: 2px;
+            cursor: pointer;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .contact-info {
+            display: none;
+            font-size: 14px;
+            color: black;
+            position: absolute;
+            /* Позиционируем дополнительную информацию абсолютно */
+            left: -300px;
+            /* Располагаем слева от родительского элемента */
+            top: 0;
+            /* Выравниваем по верхнему краю */
+        }
+
+        .contact-button:hover .contact-info {
+            display: block;
+        }
+
+        .contact-button:hover {
+            background-color: #f9f9f9;
+        }
+
+        .contact-button-number {
+            margin-bottom: 2px;
+            cursor: pointer;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .contact-info-number {
+            display: none;
+            font-size: 14px;
+            margin-top: 5px;
+            color: black;
+        }
+
+        .contact-button-number:hover .contact-info-number {
+            display: block;
+        }
+
+        .contact-button-number:hover {
+            background-color: #f9f9f9;
+        }

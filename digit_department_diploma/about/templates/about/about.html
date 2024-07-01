@@ -1,0 +1,124 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<section id="about-section">
+        <div class="section">
+            <div class="left">
+                <h2>Почему именно <u style="color: rgb(127, 148, 192); font-size: 50px;">мы</u>?</h2>
+                <hr>
+                <div class="main-text">
+                    <p>Компания активно исследует рынок как внутри страны, так и за рубежом, и получает признание этих рынков на основе тщательно подобранных запасных частей, отличных технических навыков, передового оборудования, хорошо образованных сотрудников, честного управления и отличного послепродажного обслуживания.</p>
+                </div>
+                <hr>
+            </div>
+            <div class="right">
+                <div class="image-container">
+                    <div class="main-image">
+                        <img src="{% static 'main/img/komanda.jpg' %}" alt="Основная картинка" style="margin-left: 10px; margin-top: 26px; width: 500px; transform: scaleY(1.15); transition: transform 0.3s;">
+                    </div>
+                    <div class="small-images">
+                        <div class="button">
+                        <div class="small-image">
+                            <img src="{% static 'main/img/wallpaper.jpg' %}" alt="Маленькая картинка 1" style="width: 200px; transition: transform 0.3s;">
+                            <p>Текст к картинке 1</p></div>
+                        </div>
+                        <div class="button">
+                        <div class="small-image">
+                            <img src="{% static 'main/img/wallpaper.jpg' %}" alt="Маленькая картинка 2" style="width: 200px; transition: transform 0.3s;">
+                            <p>Текст к картинке 2</p></div>
+                        </div>
+                        <div class="button">
+                            <div class="small-image">
+                                <img src="{% static 'main/img/wallpaper.jpg' %}" alt="Маленькая картинка 2" style="width: 200px; transition: transform 0.3s;">
+                                <p>Текст к картинке 2</p></div>
+                            </div>
+                    </div>
+                </div>
+                <div style="display: flex; margin-top: -197px;">
+                    <div class="button">
+                        <div class="small-image">
+                            <img src="{% static 'main/img/wallpaper.jpg' %}" alt="Картинка" style="width: 200px; transition: transform 0.3s;">
+                            <p>Текст к картинке3</p>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <div class="small-image">
+                            <img src="{% static 'main/img/wallpaper.jpg' %}" alt="Картинка" style="width: 200px; transition: transform 0.3s;">
+                            <p>Текст к картинке4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+</section>
+<body>
+<div class="content">
+    <h2>Наш ассортимент товаров:</h2>
+    <ul class="products">
+        <li class="product-item">
+            <p class="info"><a href="/products/product_page/1/" target="_blank"><font color="black" face="Array" size="6">Масло для лица</font></a></p>
+            <p class="pic"> <a href="/products/product_page/1/" target="_blank"><img alt="картинка 1" src="/img/catalog1.jpg"></a></p>
+        </li>
+
+        <li class="product-item">
+            <p class="info"><a href="/products/product_page/2/" target="_blank"><font color="black" face="Array" size="6">Масло для лица нежное</font></a></p>
+            <p class="pic"> <a href="/products/product_page/2/" target="_blank"><img alt="картинка 2" src="/img/catalog2.jpg&amp;iw=200&amp;ih=175"></a></p>
+        </li>
+
+        <li class="product-item">
+            <p class="info"><a href="/products/product_page/3/" target="_blank"><font color="black" face="Array" size="6">Масло для лица классное</font></a></p>
+            <p class="pic"> <a href="/products/product_page/3/" target="_blank"><img alt="картинка 3" src="/img/catalog3.jpg&amp;iw=200&amp;ih=175"></a></p>
+        </li>
+    </ul>
+
+    <ul class="products">
+        <li class="product-item">
+            <p class="info"><a href="/products/product_page/4/" target="_blank"><font color="black" face="Array" size="6">Масло для лица превосходное</font></a></p>
+            <p class="pic"> <a href="/products/product_page/4/" target="_blank"><img alt="картинка 4" src="file:///Users/arinamorozova/Desktop/lama.ru-main%C2%A0%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/lama_ru/main/static/main/img/catalog4.jpg"></a></p>
+        </li>
+    <h2>Отзывы наших клиентов:</h2>
+    <div class="slider">
+        <div class="slide" style="background-color: #adb6b8;">Отзыв клиента 1</div>
+        <div class="slide" style="background-color: #a09291;">Отзыв клиента 2</div>
+        <div class="slide" style="background-color: #75787a;">Отзыв клиента 3</div>
+    </div>
+
+    <h2>Бренды, с которыми мы сотрудничаем:</h2>
+    <div class="brands">
+        <ul>
+            <li>Бренд 1</li>
+            <li>Бренд 2</li>
+            <li>Бренд 3</li>
+        </ul>
+    </div>
+
+    <h2>Как нас найти:</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.193178293557!2d30.52088231600283!3d50.44731073765678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDMzJzQwLjEiTiAzMMKwMzAnNTIuNSJF!5e0!3m2!1sru!2sua!4v1631988910795!5m2!1sru!2sua" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+</body>
+<div class="contacts-sidebar">
+    <div class="contact-button" id="whatsapp">
+        <i class="fab fa-whatsapp"></i>
+        <span><a class="contact-info" href="https://api.whatsapp.com/send?phone=79165744889">Морозов Владислав</a></span>
+        <span><a class="contact-info"><img src="{% static 'main/img/whatsup.jpg' %}" alt="whatsup.jpg"></a></span>
+    </div>
+    <div class="contact-button" id="wechat">
+        <i class="fa-brands fa-weixin"></i>
+        <span><a class="contact-info"><img src="{% static 'main/img/wechat.jpg' %}" alt="wechat.jpg"></a></span>
+    </div>
+    <div class="contact-button-number" id="numbers">
+        <i class="fa-solid fa-phone"></i>
+        <span><a class="contact-info-number" href="tel:+79165744889">+7 (916) 574-48-89</a></span>
+        <span><a class="contact-info-number" href="tel:+79031238137">+7 (903) 123-81-37</a></span>
+    </div>
+</div>
+</html>
+{% endblock %}
