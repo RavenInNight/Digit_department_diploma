@@ -1,0 +1,94 @@
+/* Стили для текста в форме */
+.form-text {
+    color: black;
+}
+
+.page_center {
+    text-align: center;
+    margin-top: 50px;
+    /* Регулируйте отступ сверху по вашему усмотрению */
+    font-family: 'Arial', sans-serif;
+    /* Изменение шрифта */
+}
+
+.create_account_block-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+}
+
+.rectangle_two {
+    background-color: rgb(255, 254, 254);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: -15px;
+    margin-bottom: 50px;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+.button {
+    background-color: rgb(205, 100, 100);
+    color: rgb(249, 244, 244);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    /*кнопка посередине*/
+    margin: 0 auto;
+    /*кнопка посередине*/
+    width: 50%;
+    /*ув кнопку зарегистрироваться по ширине*/
+}
+
+.button:hover {
+    background-color: darkred;
+}
+
+.login__field {
+    margin-bottom: 10px;
+}
+
+.login__submit {
+    margin-top: 20px;
+}
+
+.attention_create {
+    text-align: center;
+}
+
+.errors {
+    color: red;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input:focus {
+    color: black;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #0b0a0a;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: rgb(96, 165, 132);
+    /* Цвет рамки при фокусе */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

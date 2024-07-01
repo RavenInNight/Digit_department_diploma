@@ -1,0 +1,54 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="page_center">
+    <p>ДОСТАВКА</p>
+</div>
+<ul class="shipping_block">
+    <!--<li class="rectangle_one">
+        <ul class="shipping_page_button">
+            <li><a href="{% url 'bag' %}">
+                <button style="color:rgb(118, 116, 111)" class="button_one">корзина</button>
+            </a></li>
+            <li><a href="{% url 'shipping' %}">
+                <button class="button_two">доставка</button>
+            </a></li>
+        </ul>
+    </li>-->
+    <li class="rectangle_two">
+        <div class="block-list screen__content">
+            <form class="login" action="{% url 'shipping' %}" method="post">
+                {% csrf_token %}
+                <div class="login__field">
+                    {{ form.first_name }}
+                </div>
+                <div class="login__field">
+                    {{ form.last_name }}
+                </div>
+                <div class="login__field">
+                    {{ form.country }}
+                </div>
+                <div class="login__field">
+                    {{ form.city }}
+                </div>
+                <div class="login__field">
+                    {{ form.postal_code }}
+                </div>
+                <div class="login__field">
+                    {{ form.address }}
+                </div>
+                <div class="login__field">
+                    {{ form.phone }}
+                </div>
+                <button class="button buy__bag">
+                    <span class="button__text">купить</span>
+                </button>
+            </form>
+        </div>
+    </li>
+    <li class="rectangle_three"></li>
+</ul>
+{% endblock %}
